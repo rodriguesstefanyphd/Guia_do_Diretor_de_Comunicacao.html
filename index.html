@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia do Diretor de Comunicação | A Igreja de Jesus Cristo dos Santos dos Últimos Dias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0062d1;
+            --text-primary: #27251f;
+            --text-secondary: #696662;
+            --border-light: #e0ddd9;
+            --background: #ffffff;
+            --background-light: #f7f6f4;
+            --accent: #c9a961;
+        }
+
+        body {
+            font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-primary);
+            background: var(--background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header - Church Style */
+        .church-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border-light);
+            padding: 24px 0;
+        }
+
+        .church-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .church-logo {
+            font-family: 'Source Serif 4', serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        /* Page Title */
+        .page-title {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px 24px 48px;
+        }
+
+        .page-title h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--background-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin: 0;
+        }
+
+        .nav li {
+            flex: 0 0 auto;
+        }
+
+        .nav a {
+            display: block;
+            padding: 16px 24px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav a:hover {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 96px;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .section h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin-bottom: 32px;
+            letter-spacing: -0.3px;
+        }
+
+        .section h3 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin: 48px 0 24px;
+            letter-spacing: -0.2px;
+        }
+
+        .section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 32px 0 16px;
+        }
+
+        /* Paragraph */
+        p {
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .lead {
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 24px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        li::marker {
+            color: var(--text-secondary);
+        }
+
+        /* Note Box - Church Style */
+        .note {
+            background: var(--background-light);
+            border-left: 4px solid var(--primary-blue);
+            padding: 24px 32px;
+            margin: 40px 0;
+        }
+
+        .note-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .note p {
+            margin-bottom: 0;
+        }
+
+        .note-warning {
+            border-left-color: #d32f2f;
+            background: #ffebee;
+        }
+
+        .note-success {
+            border-left-color: #388e3c;
+            background: #e8f5e9;
+        }
+
+        /* Quote - Church Style */
+        .scripture {
+            font-family: 'Source Serif 4', serif;
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            padding: 40px 0;
+            margin: 48px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            font-style: italic;
+        }
+
+        .scripture-ref {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            display: block;
+        }
+
+        /* Grid - Church Style */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+
+        .grid-item {
+            padding: 32px;
+            background: var(--background-light);
+            border: 1px solid var(--border-light);
+        }
+
+        .grid-item h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        /* Example Box */
+        .example {
+            background: #fff9e6;
+            border: 1px solid #f4e5b8;
+            padding: 32px;
+            margin: 40px 0;
+        }
+
+        .example-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .example-value {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Steps - Church Style */
+        .steps {
+            margin: 48px 0;
+        }
+
+        .step {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .step-number {
+            font-family: 'Source Serif 4', serif;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        .step-title {
+            font-family: 'Source Serif 4', serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-primary);
+        }
+
+        .step-content {
+            padding-left: 64px;
+        }
+
+        /* Table - Church Style */
+        .table-container {
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        th {
+            background: var(--background-light);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-light);
+            font-size: 14px;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        tr:hover {
+            background: var(--background-light);
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .resource-link {
+            display: block;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-light);
+            background: var(--background);
+            transition: all 0.2s ease;
+        }
+
+        .resource-link:hover {
+            border-color: var(--primary-blue);
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .resource-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .resource-url {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-item {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .faq-q {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .faq-a {
+            color: var(--text-secondary);
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--primary-blue);
+            color: white;
+            padding: 64px 48px;
+            margin: 80px 0;
+            text-align: center;
+        }
+
+        .cta h3 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: white;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            background: var(--background-light);
+            text-decoration: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--background-light);
+            border-top: 1px solid var(--border-light);
+            padding: 48px 24px;
+            margin-top: 96px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--border-light);
+            margin: 64px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 36px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .section h3 {
+                font-size: 24px;
+            }
+
+            .nav ul {
+                flex-direction: column;
+            }
+
+            .nav a {
+                border-bottom: 1px solid var(--border-light);
+                border-left: none;
+            }
+
+            .step-content {
+                padding-left: 0;
+            }
+
+            .step-number {
+                font-size: 36px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: background-color 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Church Header -->
+    <header class="church-header">
+        <div class="church-header-content">
+            <div class="church-logo">A Igreja de Jesus Cristo dos Santos dos Últimos Dias</div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="page-title">
+        <h1>Guia do Diretor de Comunicação</h1>
+        <p class="page-subtitle">Manual de orientação para diretores de comunicação de estacas e distritos</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#pode-fazer">Autorizado</a></li>
+                <li><a href="#nao-pode">Restrições</a></li>
+                <li><a href="#coordenacao">Coordenação</a></li>
+                <li><a href="#diretrizes">Diretrizes</a></li>
+                <li><a href="#passos">8 Passos</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#faq">Perguntas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Seção 1: Introdução -->
+        <section id="introducao" class="section">
+            <div class="section-label">Seção 1</div>
+            <h2>Introdução</h2>
+
+            <p class="lead">
+                O Conselho de Comunicação é uma ferramenta essencial para auxiliar o sacerdócio no trabalho de comunicação da Igreja, servindo como ponte entre a liderança local e a comunidade.
+            </p>
+
+            <h3>Propósito</h3>
+            <p>
+                Este chamado oferece a oportunidade de contribuir para o avanço da obra do Senhor através da comunicação eficaz e inspirada. Os objetivos principais incluem:
+            </p>
+
+            <ul>
+                <li>Prestar testemunho do Salvador e de Seu evangelho restaurado</li>
+                <li>Promover mensagens de paz, esperança e alegria</li>
+                <li>Fortalecer a fé em Cristo entre os membros</li>
+                <li>Criar relacionamentos positivos com a comunidade</li>
+            </ul>
+
+            <div class="scripture">
+                A internet e as mídias sociais têm muitas utilidades positivas. Entre elas estão as oportunidades de prestar testemunho do Salvador e de Seu evangelho restaurado. Blogs, redes sociais e outras tecnologias da internet permitem que os membros promovam as mensagens de paz, esperança e alegria que acompanham a fé em Cristo.
+                <span class="scripture-ref">Manual Geral, 38.8.20.3</span>
+            </div>
+        </section>
+
+        <!-- Seção 2: Pode Fazer -->
+        <section id="pode-fazer" class="section">
+            <div class="section-label">Seção 2</div>
+            <h2>O Que Você Pode Fazer</h2>
+
+            <div class="note note-success">
+                <div class="note-title">Autorização Prévia</div>
+                <p>As seguintes atividades são autorizadas mediante aprovação prévia da liderança do sacerdócio.</p>
+            </div>
+
+            <h3>1. Criar Canais de Comunicação</h3>
+            <p>
+                Membros podem criar sites, blogs ou contas de mídia social para auxiliar em seus chamados, desde que:
+            </p>
+
+            <ul>
+                <li>Sejam aprovados pelo presidente da estaca (recursos da estaca) ou bispo (recursos da ala)</li>
+                <li>O recurso tenha um propósito e objetivo claros</li>
+                <li>Seja nomeado de acordo com o propósito</li>
+            </ul>
+
+            <div class="example">
+                <span class="example-label">Necessidade</span>
+                <div class="example-value">Canal de comunicação direta com membros da estaca</div>
+
+                <span class="example-label">Plataforma</span>
+                <div class="example-value">Instagram</div>
+
+                <span class="example-label">Nome</span>
+                <div class="example-value">Estaca_[Nome da Estaca]</div>
+
+                <span class="example-label">Objetivos</span>
+                <div class="example-value">Anunciar atividades, compartilhar mensagens da liderança, incentivar frequência ao templo</div>
+            </div>
+
+            <h3>2. Trabalhar em Equipe</h3>
+            <p>
+                É essencial formar equipes capacitadas. Busque voluntários para:
+            </p>
+
+            <ul>
+                <li>Produção e edição de vídeo</li>
+                <li>Fotografia</li>
+                <li>Redação</li>
+                <li>Design gráfico</li>
+                <li>Envolver especialmente jovens com habilidades digitais</li>
+            </ul>
+
+            <h3>3. Coordenar Atividades</h3>
+            <ul>
+                <li>Planejar eventos de serviço</li>
+                <li>Organizar atividades da estaca</li>
+                <li>Criar campanhas de comunicação (com aprovação)</li>
+            </ul>
+        </section>
+
+        <!-- Seção 3: Não Pode -->
+        <section id="nao-pode" class="section">
+            <div class="section-label">Seção 3</div>
+            <h2>O Que Você Não Pode Fazer</h2>
+
+            <div class="note note-warning">
+                <div class="note-title">Importante</div>
+                <p>As seguintes restrições protegem tanto o indivíduo quanto a instituição.</p>
+            </div>
+
+            <h3>1. Representação Oficial</h3>
+            <p>Os membros não podem:</p>
+
+            <ul>
+                <li>Criar sites, blogs ou contas de mídia social em nome da Igreja</li>
+                <li>Representar oficialmente a Igreja e seus pontos de vista, doutrina, normas e procedimentos</li>
+                <li>Declarar ou indicar que o conteúdo é patrocinado, endossado ou representa oficialmente a Igreja</li>
+            </ul>
+
+            <div class="note">
+                <div class="note-title">Requisito Obrigatório</div>
+                <p>Deve-se incluir um aviso declarando que não é um produto oficial patrocinado pela Igreja.</p>
+            </div>
+
+            <h3>2. Uso de Identidade Visual</h3>
+            <p>A logomarca ou o símbolo da Igreja não pode ser usado nem imitado.</p>
+        </section>
+
+        <!-- Seção 4: Coordenação -->
+        <section id="coordenacao" class="section">
+            <div class="section-label">Seção 4</div>
+            <h2>Quando Contatar a Estaca</h2>
+
+            <p class="lead">
+                A coordenação com o Conselho de Comunicação da Estaca é essencial para garantir unidade e alinhamento.
+            </p>
+
+            <div class="scripture">
+                Sede um; e se não o fordes, não sois meus.
+                <span class="scripture-ref">Doutrina e Convênios 38:27</span>
+            </div>
+
+            <h3>Entre em contato ANTES de:</h3>
+            <ol>
+                <li>Realizar eventos de serviço com alcance ou visibilidade pública</li>
+                <li>Fazer doações para qualquer entidade, instituição ou ONG da cidade</li>
+                <li>Aceitar convites para participar de eventos públicos promovidos pela comunidade</li>
+                <li>Iniciar campanhas de divulgação voltadas à comunidade externa</li>
+                <li>Divulgar atividades que envolvam a estaca</li>
+                <li>Ter contato com líderes comunitários, autoridades políticas ou representantes da mídia</li>
+            </ol>
+        </section>
+
+        <!-- Seção 5: Diretrizes -->
+        <section id="diretrizes" class="section">
+            <div class="section-label">Seção 5</div>
+            <h2>Diretrizes de Conduta Online</h2>
+
+            <p class="lead">
+                Os membros são incentivados a compartilhar conteúdo edificante e ser exemplos de civilidade em todas as interações online.
+            </p>
+
+            <h3>Princípios</h3>
+
+            <div class="grid">
+                <div class="grid-item">
+                    <h4>Conteúdo Edificante</h4>
+                    <p>Compartilhe mensagens que inspiram e elevam espiritualmente.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Civilidade</h4>
+                    <p>Seja exemplo de respeito em todas as interações.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Evitar Contendas</h4>
+                    <p>Abstenha-se de debates controversos ou polarizados.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Respeito Universal</h4>
+                    <p>Demonstre respeito por todos, independentemente de crenças.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Dignidade</h4>
+                    <p>Reconheça a dignidade de todos como filhos de Deus.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Exemplo Cristão</h4>
+                    <p>Reflita os atributos de Cristo em todas as comunicações.</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <p>Os membros devem evitar todo tipo de declarações de preconceito contra outras pessoas. Eles se esforçam para ser semelhantes a Cristo em todos os momentos, inclusive online.</p>
+            </div>
+        </section>
+
+        <!-- Seção 6: 8 Passos -->
+        <section id="passos" class="section">
+            <div class="section-label">Seção 6</div>
+            <h2>Oito Passos para Começar</h2>
+
+            <p class="lead">
+                A implementação eficaz segue o padrão de liderança "Liderar como o Salvador".
+            </p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Agir Sob Orientação do Espírito</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Busque inspiração através de oração pessoal e estudo das escrituras. Todas as decisões devem ser fundamentadas em orientação espiritual.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Alinhar-se com as Autoridades</div>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Reunir com a presidência da estaca ou distrito</li>
+                            <li>Apresentar-se aos bispos e líderes das alas</li>
+                            <li>Identificar prioridades</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Definir a Direção</div>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Planejar eventos sugeridos pela Área</li>
+                            <li>Estabelecer metas de relacionamentos</li>
+                            <li>Criar calendário anual</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Reunir-se em Conselho</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Formar e reunir regularmente o Conselho de Comunicação, utilizando os princípios de conselho para decisões inspiradas.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <div class="step-title">Edificar Capacidade</div>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Participar de treinamentos oferecidos</li>
+                            <li>Agendar capacitação com o Conselho da Missão</li>
+                            <li>Desenvolver competências da equipe</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">6</div>
+                        <div class="step-title">Organizar o Trabalho</div>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Estabelecer calendário e cronograma</li>
+                            <li>Acompanhar atividades das alas</li>
+                            <li>Manter comunicação regular</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">7</div>
+                        <div class="step-title">Realizar o Trabalho</div>
+                    </div>
+                    <div class="step-content">
+                        <p>Executar o plano através de planejamento detalhado, organização eficiente e delegação apropriada.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">8</div>
+                        <div class="step-title">Prestar Contas</div>
+                    </div>
+                    <div class="step-content">
+                        <ul>
+                            <li>Submeter relatórios regulares</li>
+                            <li>Comunicar resultados e desafios</li>
+                            <li>Contato: <a href="mailto:dapmissao@gmail.com">dapmissao@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Ferramentas -->
+        <section id="ferramentas" class="section">
+            <div class="section-label">Seção 7</div>
+            <h2>Ferramentas e Recursos</h2>
+
+            <p class="lead">
+                Ferramentas recomendadas para produção de conteúdo profissional.
+            </p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Ferramenta</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vídeo</td>
+                            <td>CapCut</td>
+                            <td>Editor de vídeo gratuito para dispositivos móveis</td>
+                        </tr>
+                        <tr>
+                            <td>Fotografia</td>
+                            <td>VSCO</td>
+                            <td>Aplicativo de edição fotográfica</td>
+                        </tr>
+                        <tr>
+                            <td>Design</td>
+                            <td>Canva</td>
+                            <td>Plataforma com templates profissionais (recomendado)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <div class="note-title">Parcerias Comunitárias</div>
+                <p>Estabeleça parcerias com secretarias municipais, ONGs e instituições relevantes. Toda parceria deve ser previamente aprovada pela liderança do sacerdócio.</p>
+            </div>
+
+            <div class="note note-warning">
+                <div class="note-title">Lembre-se</div>
+                <p>O Conselho de Comunicação é uma ferramenta de auxílio ao sacerdócio. Todas as decisões devem ser previamente aprovadas.</p>
+            </div>
+        </section>
+
+        <!-- Seção 8: Recursos -->
+        <section id="recursos" class="section">
+            <div class="section-label">Seção 8</div>
+            <h2>Recursos Oficiais</h2>
+
+            <p>
+                Consulte regularmente os seguintes recursos oficiais:
+            </p>
+
+            <a href="https://www.churchofjesuschrist.org/study/manual/general-handbook/38-church-policies-and-guidelines?lang=por" target="_blank" class="resource-link">
+                <div class="resource-title">Manual Geral - Seção 38.8.20</div>
+                <div class="resource-url">churchofjesuschrist.org/study/manual/general-handbook</div>
+            </a>
+
+            <a href="https://www.churchofjesuschrist.org/study/manual/communication-councils-for-priesthood-leaders?lang=por" target="_blank" class="resource-link">
+                <div class="resource-title">Conselhos de Comunicação para Líderes</div>
+                <div class="resource-url">churchofjesuschrist.org/study/manual/communication-councils</div>
+            </a>
+
+            <a href="https://www.churchofjesuschrist.org/?lang=por" target="_blank" class="resource-link">
+                <div class="resource-title">Site Oficial da Igreja</div>
+                <div class="resource-url">churchofjesuschrist.org</div>
+            </a>
+
+            <a href="https://www.churchofjesuschrist.org/media?lang=por" target="_blank" class="resource-link">
+                <div class="resource-title">Biblioteca de Mídia</div>
+                <div class="resource-url">churchofjesuschrist.org/media</div>
+            </a>
+        </section>
+
+        <!-- Seção 9: FAQ -->
+        <section id="faq" class="section">
+            <div class="section-label">Seção 9</div>
+            <h2>Perguntas Frequentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso criar uma conta de Instagram para minha ala?</div>
+                <div class="faq-a">Sim, mediante aprovação prévia do bispo e observância de todas as diretrizes do Manual Geral. A conta deve incluir aviso de que não se trata de canal oficial.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso usar a logomarca da Igreja?</div>
+                <div class="faq-a">Não. A logomarca oficial é de uso exclusivamente institucional e não pode ser utilizada em canais não oficiais.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Como proceder ao receber contato da mídia?</div>
+                <div class="faq-a">Entre em contato imediatamente com o Conselho de Comunicação da Estaca antes de fornecer qualquer informação.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Como trabalhar com voluntários?</div>
+                <div class="faq-a">Mantenha organização, delegue com clareza, estabeleça expectativas realistas e demonstre gratidão. Todo trabalho é voluntário.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">Posso estabelecer parcerias com ONGs?</div>
+                <div class="faq-a">Sim, desde que previamente aprovadas pela presidência da estaca e alinhadas com os valores da Igreja.</div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta">
+            <h3>Próximos Passos</h3>
+            <p>
+                Para iniciar seu trabalho, recomendamos agendar uma reunião com o Conselho de Comunicação da Missão.
+            </p>
+            <a href="mailto:dapmissao@gmail.com" class="button">Agendar Reunião</a>
+        </div>
+
+        <!-- Closing Scripture -->
+        <div class="scripture">
+            E todo aquele que deixar casas, ou irmãos, ou irmãs, ou pai, ou mãe, ou mulher, ou filhos, ou terras, por amor de meu nome, receberá cem vezes tanto, e herdará a vida eterna.
+            <span class="scripture-ref">Mateus 19:29</span>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Material elaborado com base no Manual Geral da Igreja de Jesus Cristo dos Santos dos Últimos Dias</p>
+            <p>Conselho de Comunicação da Missão Londrina</p>
+            <p>© 2025 Intellectual Reserve, Inc. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.borderBottomColor = 'transparent';
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.style.borderBottomColor = 'var(--primary-blue)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
