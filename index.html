@@ -477,25 +477,57 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .page-title h1 {
-                font-size: 36px;
+            .page-title {
+                padding: 40px 20px 30px;
             }
 
-            .section h2 {
+            .page-title h1 {
                 font-size: 28px;
             }
 
-            .section h3 {
+            .page-title p {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section h2 {
                 font-size: 24px;
             }
 
+            .section h3 {
+                font-size: 18px;
+            }
+
+            /* Nav: horizontal scroll on mobile */
             .nav ul {
-                flex-direction: column;
+                flex-direction: row;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                gap: 0;
             }
 
             .nav a {
-                border-bottom: 1px solid var(--border-light);
+                white-space: nowrap;
+                font-size: 13px;
+                padding: 12px 14px;
+                border-bottom: none;
                 border-left: none;
+            }
+
+            /* Steps */
+            .step-header {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 12px;
             }
 
             .step-content {
@@ -503,10 +535,125 @@
             }
 
             .step-number {
-                font-size: 36px;
+                font-size: 28px;
+                min-width: 36px;
             }
 
+            /* Grid cards */
             .grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Table overflow */
+            table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                font-size: 14px;
+            }
+
+            /* Example table in section 2 */
+            .example-table {
+                font-size: 13px;
+            }
+
+            /* Scripture */
+            .scripture {
+                padding: 20px 16px;
+                font-size: 16px;
+            }
+
+            /* Notes */
+            .note {
+                padding: 16px;
+            }
+
+            /* CTA */
+            .cta {
+                padding: 40px 20px;
+            }
+
+            /* Footer */
+            .footer-content {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+                font-size: 13px;
+            }
+
+            /* Lead text */
+            .lead {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title h1 {
+                font-size: 24px;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+
+            .nav a {
+                font-size: 12px;
+                padding: 10px 12px;
+            }
+
+            .img-block img {
+                max-height: 300px !important;
+            }
+        }
+
+        /* Images - Church Style */
+        .img-block {
+            margin: 40px 0;
+        }
+
+        .img-block img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-block figcaption {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .img-grid figure {
+            margin: 0;
+        }
+
+        .img-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            display: block;
+            border-radius: 2px;
+            background: #f7f6f4;
+        }
+
+        .img-grid figcaption {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .img-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -556,21 +703,41 @@
             <div class="section-label">Seção 1</div>
             <h2>Introdução</h2>
 
+            <figure class="img-block">
+                <img src="https://www.churchofjesuschrist.org/imgs/334a1d2f9c379c03dc210d41c92c1552f821c5dc/full/!800,/0/default" alt="Cristo e as Crianças de Todas as Partes do Mundo" style="height:auto; max-height:480px; object-fit:contain; background:#f7f6f4;">
+                <figcaption>Cristo e as Crianças de Todas as Partes do Mundo | Livro de Gravuras do Evangelho</figcaption>
+            </figure>
+
             <p class="lead">
-                O Conselho de Comunicação é uma ferramenta essencial para auxiliar o sacerdócio no trabalho de comunicação da Igreja, servindo como ponte entre a liderança local e a comunidade.
+                O Conselho de Comunicação é uma ferramenta do sacerdócio para comunicar a obra do Senhor com clareza e integridade, aproximando membros, líderes e a comunidade.
             </p>
 
             <h3>Propósito</h3>
             <p>
-                Este chamado oferece a oportunidade de contribuir para o avanço da obra do Senhor através da comunicação eficaz e inspirada. Os objetivos principais incluem:
+                Este chamado oferece a oportunidade de contribuir para o avanço da obra do Senhor. Os objetivos principais incluem:
             </p>
 
             <ul>
                 <li>Prestar testemunho do Salvador e de Seu evangelho restaurado</li>
                 <li>Promover mensagens de paz, esperança e alegria</li>
                 <li>Fortalecer a fé em Cristo entre os membros</li>
-                <li>Criar relacionamentos positivos com a comunidade</li>
+                <li>Criar relacionamentos positivos e duradouros com a comunidade</li>
             </ul>
+
+            <div class="img-grid">
+                <figure>
+                    <img src="https://www.churchofjesuschrist.org/imgs/a95f9e4c5d3e6e713a3b7875c9130207b030c3aa/full/!800,/0/default" alt="A Oração Familiar">
+                    <figcaption>A Oração Familiar</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://www.churchofjesuschrist.org/imgs/599995636f895540bf7c880c780a728fd768a67c/full/!800,/0/default" alt="Um Jovem Casal Indo ao Templo">
+                    <figcaption>Um Jovem Casal Indo ao Templo</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://www.churchofjesuschrist.org/imgs/b38b6e1c8cce0e848b583da201df70c336d35c1e/full/!800,/0/default" alt="Serviço">
+                    <figcaption>Serviço</figcaption>
+                </figure>
+            </div>
 
             <div class="scripture">
                 A internet e as mídias sociais têm muitas utilidades positivas. Entre elas estão as oportunidades de prestar testemunho do Salvador e de Seu evangelho restaurado. Blogs, redes sociais e outras tecnologias da internet permitem que os membros promovam as mensagens de paz, esperança e alegria que acompanham a fé em Cristo.
@@ -585,7 +752,7 @@
 
             <div class="note note-success">
                 <div class="note-title">Autorização Prévia</div>
-                <p>As seguintes atividades são autorizadas mediante aprovação prévia da liderança do sacerdócio.</p>
+                <p>As seguintes atividades são permitidas mediante aprovação prévia do presidente de estaca ou bispo responsável.</p>
             </div>
 
             <h3>1. Criar Canais de Comunicação</h3>
@@ -614,6 +781,12 @@
             </div>
 
             <h3>2. Trabalhar em Equipe</h3>
+
+            <figure class="img-block">
+                <img src="https://www.churchofjesuschrist.org/imgs/1f6f31f42e8a11fd8ff5f2641d09196a2d3580a7/full/!800,/0/default" alt="Missionárias: Sísteres" style="height:auto; max-height:420px; object-fit:contain; background:#f7f6f4;">
+                <figcaption>Missionárias Sísteres — trabalho de alcance e comunicação | Livro de Gravuras do Evangelho</figcaption>
+            </figure>
+
             <p>
                 É essencial formar equipes capacitadas. Busque voluntários para:
             </p>
@@ -625,6 +798,11 @@
                 <li>Design gráfico</li>
                 <li>Envolver especialmente jovens com habilidades digitais</li>
             </ul>
+
+            <figure class="img-block">
+                <img src="https://www.churchofjesuschrist.org/imgs/b38b6e1c8cce0e848b583da201df70c336d35c1e/full/!800,/0/default" alt="Serviço" style="height:auto; max-height:420px; object-fit:contain; background:#f7f6f4;">
+                <figcaption>Serviço — coordenar atividades para servir a comunidade | Livro de Gravuras do Evangelho</figcaption>
+            </figure>
 
             <h3>3. Coordenar Atividades</h3>
             <ul>
@@ -640,32 +818,37 @@
             <h2>O Que Você Não Pode Fazer</h2>
 
             <div class="note note-warning">
-                <div class="note-title">Importante</div>
-                <p>As seguintes restrições protegem tanto o indivíduo quanto a instituição.</p>
+                <div class="note-title">Atenção</div>
+                <p>Estas restrições existem para proteger a integridade da Igreja e dos membros. Seguir essas diretrizes é fundamental para manter a confiança da liderança no trabalho de comunicação.</p>
             </div>
 
             <h3>1. Representação Oficial</h3>
             <p>Os membros não podem:</p>
 
             <ul>
-                <li>Criar sites, blogs ou contas de mídia social em nome da Igreja</li>
-                <li>Representar oficialmente a Igreja e seus pontos de vista, doutrina, normas e procedimentos</li>
-                <li>Declarar ou indicar que o conteúdo é patrocinado, endossado ou representa oficialmente a Igreja</li>
+                <li>Criar sites, blogs ou contas de mídia social em nome oficial da Igreja</li>
+                <li>Representar oficialmente a Igreja, sua doutrina, normas ou procedimentos</li>
+                <li>Declarar ou sugerir que o conteúdo é patrocinado ou endossado pela Igreja</li>
             </ul>
 
             <div class="note">
                 <div class="note-title">Requisito Obrigatório</div>
-                <p>Deve-se incluir um aviso declarando que não é um produto oficial patrocinado pela Igreja.</p>
+                <p>Todo canal criado por membros deve incluir um aviso claro de que não é um produto oficial da Igreja.</p>
             </div>
 
             <h3>2. Uso de Identidade Visual</h3>
-            <p>A logomarca ou o símbolo da Igreja não pode ser usado nem imitado.</p>
+            <p>A logomarca ou o símbolo da Igreja não pode ser usado nem imitado em nenhum canal não oficial.</p>
         </section>
 
         <!-- Seção 4: Coordenação -->
         <section id="coordenacao" class="section">
             <div class="section-label">Seção 4</div>
             <h2>Quando Contatar a Estaca</h2>
+
+            <figure class="img-block">
+                <img src="https://www.churchofjesuschrist.org/imgs/9a9227a805e4f142b8f413eff6033062ca0f4fb5/full/!800,/0/default" alt="A Distribuição do Sacramento" style="height:auto; max-height:480px; object-fit:contain; background:#f7f6f4;">
+                <figcaption>A Distribuição do Sacramento — unidade no trabalho do Senhor | Livro de Gravuras do Evangelho</figcaption>
+            </figure>
 
             <p class="lead">
                 A coordenação com o Conselho de Comunicação da Estaca é essencial para garantir unidade e alinhamento.
@@ -738,6 +921,11 @@
             <p class="lead">
                 A implementação eficaz segue o padrão de liderança "Liderar como o Salvador".
             </p>
+
+            <figure class="img-block">
+                <img src="https://www.churchofjesuschrist.org/imgs/224a22b78a5e684a27207bbf29e60862dd2e55c3/full/!800,/0/default" alt="Cristo e as Crianças" style="height:auto; max-height:520px; object-fit:contain; background:#f7f6f4;">
+                <figcaption>Cristo e as Crianças — o modelo de liderança que serve e ensina | Livro de Gravuras do Evangelho</figcaption>
+            </figure>
 
             <div class="steps">
                 <div class="step">
@@ -835,7 +1023,7 @@
                         <ul>
                             <li>Submeter relatórios regulares</li>
                             <li>Comunicar resultados e desafios</li>
-                            <li>Contato: <a href="mailto:dapmissao@gmail.com">dapmissao@gmail.com</a></li>
+                            <li>Contato: Presidente do Conselho de Comunicação da Estaca</li>
                         </ul>
                     </div>
                 </div>
@@ -956,15 +1144,20 @@
         <div class="cta">
             <h3>Próximos Passos</h3>
             <p>
-                Para iniciar seu trabalho, recomendamos agendar uma reunião com o Conselho de Comunicação da Missão.
+                Para iniciar seu trabalho, recomendamos agendar uma reunião com o Conselho de Comunicação da sua Estaca ou Missão.
             </p>
-            <a href="mailto:dapmissao@gmail.com" class="button">Agendar Reunião</a>
+            <a href="https://www.churchofjesuschrist.org/callings/communication-director?lang=por" class="button">Acessar Recursos Oficiais</a>
         </div>
 
         <!-- Closing Scripture -->
+        <figure class="img-block">
+            <img src="https://www.churchofjesuschrist.org/imgs/a824e2d796036346a7d663cf48aef69807c05400/full/!800,/0/default" alt="A Segunda Vinda" style="height:auto; max-height:600px; object-fit:contain; background:#f7f6f4;">
+            <figcaption>A Segunda Vinda | Livro de Gravuras do Evangelho</figcaption>
+        </figure>
+
         <div class="scripture">
-            E todo aquele que deixar casas, ou irmãos, ou irmãs, ou pai, ou mãe, ou mulher, ou filhos, ou terras, por amor de meu nome, receberá cem vezes tanto, e herdará a vida eterna.
-            <span class="scripture-ref">Mateus 19:29</span>
+            Ide, portanto, e fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo; ensinando-os a guardar todas as coisas que vos tenho ordenado.
+            <span class="scripture-ref">Mateus 28:19–20</span>
         </div>
 
     </main>
@@ -972,13 +1165,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>Material elaborado com base no Manual Geral da Igreja de Jesus Cristo dos Santos dos Últimos Dias</p>
-            <p>Conselho de Comunicação da Missão Londrina</p>
+            <p>Material elaborado com base no Manual Geral, discursos de Conferência Geral e treinamentos oficiais da Igreja de Jesus Cristo dos Santos dos Últimos Dias</p>
+            <p>Conselho de Comunicação da Estaca</p>
             <p>© 2025 Intellectual Reserve, Inc. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script>
+<script>
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1007,13 +1200,4 @@
                 }
             });
 
-            navLinks.forEach(link => {
-                link.style.borderBottomColor = 'transparent';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.borderBottomColor = 'var(--primary-blue)';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+            navLinks.forEach(link =>
